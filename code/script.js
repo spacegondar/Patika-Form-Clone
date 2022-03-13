@@ -5,6 +5,7 @@ formDOM.addEventListener('submit', formSubmit)
 const data = [] // Girilen bilgilerin ilk alındığı dizi
 const allParticipants = [] // Her kişi dizisinin saklandığı ana dizi
 const allPeople = []        // Her kişi objesinin saklandığı ana dizi
+let x = 0, y = 0, z = 0, d = 0 // Grafik sütun değerleri
 
 // Radio button inputundan değer alabilmek için tanımlanan fonksiyon
 function radiValue(name) {
@@ -16,14 +17,6 @@ function radiValue(name) {
         }
     }
 }
-
-
-
-
-
-
-
-
 
 //Form Gönder Etkinliği
 function formSubmit(event) {
@@ -59,10 +52,9 @@ function formSubmit(event) {
         );
         // Objelerin kümülatif diziye atanıp yazdırılması
         allPeople.push(peopleObj)
+        console.log("Properties içeren dizi:")
         console.log(allPeople)
     }
-
-
 
 
 
@@ -74,14 +66,30 @@ function formSubmit(event) {
     data[4] = goodInputDOM.value
     data[5] = badInputDOM.value
 
+    //Grafik valuelarının dizi elmenı kontrol edilerek arttırılması
+    if (data[1] == "Kofana") {
+        x += 1;
+    }
+    else if (data[1] == "Waikiki") {
+        y += 1;
+    }
+    else if (data[1] == "101") {
+        z++;
+    }
+    else {
+        d++;
+    }
+
+
     // Kişi bilgilerinin kümilaftif diziye atılması
     allParticipants.push(data.slice())
+    console.log("Değerleri içeren dizi:")
     console.log(allParticipants)
-    
     // Obje oluşturan ve bilgileri yazdıran fonksiyonun çağrılması
     addPeople()
 
     // Son girilen bilgilerin doğrulama için ekrana yazdırılması
+    console.log("Son girilen bilgiler:")
     console.log(cityInputDOM.value)
     console.log(bootInputDOM.value)
     console.log(radiValue("learn"))
@@ -89,8 +97,26 @@ function formSubmit(event) {
     console.log(goodInputDOM.value)
     console.log(badInputDOM.value)
 
+
+    let xValues = ["Kofana", "Waikiki", "A-101", "Trendyol"];
+    let yValues = [x, y, z, d];
+    let barColors = ["red", "green", "blue", "orange"];
+
+
+    // Grafik Oluşumu
+    var datar = [
+        {
+            x: xValues,
+            y: yValues,
+            type: 'bar'
+        }
+    ];
+
+    Plotly.newPlot('myDiv', datar);
+
+
+    // Formun temizlenmesi
     document.getElementById("userForm").reset();
 
 
 }
-

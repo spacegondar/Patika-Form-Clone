@@ -31,7 +31,6 @@
         <article class="sorular">
             <p class="name">Hangi şehirde yaşıyorsun?</p>
             <div><input type="text" name="city" id="city" placeholder="Yanıtınız"></div>
-
         </article>
 
         <!-- Bootcamp İnput -->
@@ -80,7 +79,6 @@
                 <label for="Çok İyi4">Çok İyi</label>
             </div>
             <br>
-
         </article>
 
 
@@ -88,14 +86,12 @@
         <article>
             <p class="name">Bu hafta özellikle iyi giden 1-2 şey neydi? <span class="require">*</span></p>
             <div><input type="text" id="good" placeholder="Yanıtınız" required></div>
-
         </article>
 
         <!-- Kötü Giden İnput -->
         <article>
             <p class="name">Bu hafta özellikle kötü giden 1-2 şey neydi? <span class="require">*</span></p>
             <div><input type="text" id="bad" placeholder="Yanıtınız" required></div>
-
         </article>
 
 
@@ -104,6 +100,7 @@
             <br>
             <input type="submit" class="buton">
             <input type="reset" class="buton1">
+
 
             <p>
                 Formlar üzerinden asla şifre göndermeyin
@@ -115,11 +112,14 @@
                     href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfKB7vqgqhP-H9lXI6wbYFAk4UehE_rErEGqrS7L98Vc4EtxA/reportabuse?source=https://docs.google.com/forms/d/e/1FAIpQLSfKB7vqgqhP-H9lXI6wbYFAk4UehE_rErEGqrS7L98Vc4EtxA/viewform">Kötüye
                     Kullanımı Bildirme</a>
             </p>
+            <div id='myDiv'><!-- Grafik alanı --></div>
         </footer>
-
     </form>
     <!-- JavaScript Src -->
+    <div align="center"><canvas id="myChart" style="width:100%;max-width:600px"></canvas></div>
     <script src="script.js"></script>
+    <script src='https://cdn.plot.ly/plotly-2.9.0.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </body>
 
 </html>
