@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patika Form</title>
+    <!-- Css Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Form Resmi -->
+    <figure align="center">
+        <img src="https://lh5.googleusercontent.com/itLly605hpftkrU4bMpRnFHXvser6JiyrN4CLTrze-iuygfI9TyzTPC7KyKx9gguWR5BylX-pBY9py4YQoV8RbRItWjMdcmfwsazqcgwJYrDuH8xfsK4myLdAAcrv0IYsw=w800"
+            alt="Patika-Backgroud" height="160px" width="640px" class="logo">
+    </figure>
+
+    <!-- Form Öncesi Bilgilendirme -->
+    <header>
+        <h1>Haftalık bootcamp programı geri bildirim formu</h1>
+        <p>Cevaplarınız anonim, dilediğinizce yazın :)</p>
+        <hr>
+        <p style="font-size:11px;">Zorunlu alanlar <span class="require">*</span> ile gösterilmiştir</p>
+
+    </header>
+
+    <form id="userForm">
+        <!-- Şehir İnput -->
+        <article class="sorular">
+            <p class="name">Hangi şehirde yaşıyorsun?</p>
+            <div><input type="text" name="city" id="city" placeholder="Yanıtınız"></div>
+
+        </article>
+
+        <!-- Bootcamp İnput -->
+        <article>
+            <p class="name">Hangi bootcamp programına katılıyorsun? <span class="require">*</span></p>
+            <div>
+                <select name="bootcamps" id="bootcamps" required>
+                    <option value="" align="center">Birini Seçiniz</option>
+                    <option value="Kofana">Kofana Software Bootcamp</option>
+                    <option value="Waikiki">LC Waikiki .Net Bootcamp</option>
+                    <option value="101">A-101 Bootcamp</option>
+                    <option value="Trendyol">Trendyol Data Talent Bootcamp</option>
+                </select>
+            </div>
+        </article>
+
+        <!-- Etkinlik İnput -->
+        <article>
+            <p class="name">Bu hafta patika dersleri ve etkinliklerinde ne kadar öğrendin? <span
+                    class="require">*</span></p>
+            <div class="radio1">
+                <input type="radio" name="learn" id="kötü" value="Kötü-Etkinlik" class="learn" required>
+                <label for="kötü">Kötü</label>
+                <input type="radio" name="learn" id="orta" value="Orta-Etkinlik" class="learn">
+                <label for="orta">Orta</label>
+                <input type="radio" name="learn" id="iyi" value="İyi-Etkinlik" class="learn">
+                <label for="iyi">İyi</label>
+                <input type="radio" name="learn" id="Çok İyi" value="Çok İyi-Etkinlik" class="learn">
+                <label for="Çok iyi">Çok İyi</label>
+            </div>
+            <br>
+
+        </article>
+
+        <!-- Eğitmen İnput -->
+        <article>
+            <p class="name">Bu hafta eğitmenle deneyimin nasıldı? <span class="require">*</span></p>
+            <div>
+                <input type="radio" id="kötü1" name="hoca" value="Kötü-Eğitmen" class="hoca" required>
+                <label for="kötü1">Kötü</label>
+                <input type="radio" id="orta2" name="hoca" value="Orta-Eğitmen" class="hoca">
+                <label for="orta2">Orta</label>
+                <input type="radio" id="iyi3" name="hoca" value="İyi-Eğitmen" class="hoca">
+                <label for="iyi3">İyi</label>
+                <input type="radio" id="Çok İyi4" name="hoca" value="Çok İyi-Eğitmen" class="hoca">
+                <label for="Çok İyi4">Çok İyi</label>
+            </div>
+            <br>
+
+        </article>
+
+
+        <!-- İyi Giden İnput -->
+        <article>
+            <p class="name">Bu hafta özellikle iyi giden 1-2 şey neydi? <span class="require">*</span></p>
+            <div><input type="text" id="good" placeholder="Yanıtınız" required></div>
+
+        </article>
+
+        <!-- Kötü Giden İnput -->
+        <article>
+            <p class="name">Bu hafta özellikle kötü giden 1-2 şey neydi? <span class="require">*</span></p>
+            <div><input type="text" id="bad" placeholder="Yanıtınız" required></div>
+
+        </article>
+
+
+        <!-- Butonlar -->
+        <footer align="center">
+            <br>
+            <input type="submit" class="buton">
+            <input type="reset" class="buton1">
+
+            <p>
+                Formlar üzerinden asla şifre göndermeyin
+            </p>
+
+            <p>
+                Bu form <a href="https://www.linkedin.com/in/uzaypeker/" target="_blank">Uzay Peker</a> tarafından
+                oluşturuldu. <a
+                    href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfKB7vqgqhP-H9lXI6wbYFAk4UehE_rErEGqrS7L98Vc4EtxA/reportabuse?source=https://docs.google.com/forms/d/e/1FAIpQLSfKB7vqgqhP-H9lXI6wbYFAk4UehE_rErEGqrS7L98Vc4EtxA/viewform">Kötüye
+                    Kullanımı Bildirme</a>
+            </p>
+        </footer>
+
+    </form>
+    <!-- JavaScript Src -->
+    <script src="script.js"></script>
+</body>
+
+</html>
